@@ -23,7 +23,7 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> GetBooks()
         {
             var books = await _context.BookTbls.ToListAsync();
-            var mapped = _mapper.Map<IEnumerable<BookDTO>>(books);
+            var mapped = _mapper.Map<IEnumerable<BookDTO_ReadDTO>>(books);
             return Ok(mapped);
         }
 
@@ -31,7 +31,7 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> GetBorrowers()
         {
             var borrowers = await _context.BorrowerTbls.ToListAsync();
-            var mapped = _mapper.Map<IEnumerable<BorrowerDTO>>(borrowers);
+            var mapped = _mapper.Map<IEnumerable<Borrower_ReadDTO>>(borrowers);
             return Ok(mapped);
         }
 
@@ -39,14 +39,14 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> GetReturnees()
         {
             var returnees = await _context.ReturneeTbls.ToListAsync();
-            var mapped = _mapper.Map<IEnumerable<ReturneeDTO>>(returnees);
+            var mapped = _mapper.Map<IEnumerable<Returnee_ReadDTO>>(returnees);
             return Ok(mapped);
         }
         [HttpGet("transactions")]
-        public async Task<ActionResult<IEnumerable<LibraryTransactionDTO>>> GetTransactions()
+        public async Task<ActionResult<IEnumerable<LibraryTransaction_ReadDTO>>> GetTransactions()
         {
             var transactions = await _context.LibraryTransactionVws.ToListAsync();
-            var result = _mapper.Map<IEnumerable<LibraryTransactionDTO>>(transactions);
+            var result = _mapper.Map<IEnumerable<LibraryTransaction_ReadDTO>>(transactions);
             return Ok(result);
         }
     }

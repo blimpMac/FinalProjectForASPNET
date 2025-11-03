@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.DTOs
 {
-    public class LibraryTransactionDTO
+    public class LibraryTransaction_ReadDTO
     {
         public string Isbnnumber { get; set; } = null!;
         public string BookName { get; set; } = null!;

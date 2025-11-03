@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Statistics Dashboard</title>
+    <link rel="stylesheet" href="Test2Css.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <h2>Library Panel</h2>
+            <nav>
+                <a href="AdminAcW.html">Back to Admin Page</a>
+                <a href="#analytics">Analytics</a>
+            </nav>
+        </aside>
+
+        <div class="main">
+            <div class="topbar">
+                <h1>Library Statistics Dashboard</h1>
+                <div>Admin Panel</div>
+            </div>
+
+            <div class="dashboard" id="dashboard">
+                <div class="card">
+                    <h3>Total Visitors (This Month)</h3>
+                    <p id="total-visitors">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Borrowers (Active)</h3>
+                    <p id="total-borrowers">0</p>
+                </div>
+                <div class="card">
+                    <h3>Books Borrowed Today</h3>
+                    <p id="borrowed-today">0</p>
+                </div>
+                <div class="card">
+                    <h3>Books Overdue</h3>
+                    <p id="overdue-books">0</p>
+                </div>
+            </div>
+
+            <div class="card" id="analytics">
+                <div class="chart-header">
+                    <h3>Borrowing Trends</h3>
+                    <select id="chart-days-toggle" style="padding:5px;">
+                        <option value="7">Last 7 Days</option>
+                        <option value="14">Last 14 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                    </select>
+                </div>
+                <canvas id="analyticsChart" style="width:100%; height:300px;"></canvas>
+            </div>
+
+            <div class="card" id="recent-activity">
+                <h3>Recent Borrower Activity</h3>
+                <div id="api-response-container">
+                    <pre id="recent-borrowers">Loading recent activity...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Test2JS.js"></script>
+</body>
+</html>

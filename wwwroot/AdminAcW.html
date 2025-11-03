@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="TestCSS.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <nav>
+                <a href="Test2.Html">Library Dashboard</a>
+                <a href="Test.Html">Staff</a>
+            </nav>
+        </aside>
+
+        <div class="main">
+            <div class="topbar">
+                <h1>Admin</h1>
+                <div>Admin Access</div>
+            </div>
+
+            <div class="dashboard">
+
+                <div class="card">
+                    <h3>POST: Add New Book</h3>
+                    <form id="form-post-book">
+                        <div>
+                            <label for="post-book-isbn">Book ISBN:</label>
+                            <input type="text" id="post-book-isbn" required>
+                        </div>
+                        <div>
+                            <label for="post-book-name">Book Name:</label>
+                            <input type="text" id="post-book-name" required>
+                        </div>
+                        <div>
+                            <label for="post-author-name">Author Name:</label>
+                            <input type="text" id="post-author-name" required>
+                        </div>
+                        <div>
+                            <label for="post-course">Course:</label>
+                            <input type="text" id="post-course" required>
+                        </div>
+                        <div>
+                            <label for="post-section">Section:</label>
+                            <input type="text" id="post-section" required>
+                        </div>
+                        <button type="submit" class="success">Confirm</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>PUT: Update Book by ISBN</h3>
+                    <form id="form-put-book">
+                        <div>
+                            <label for="put-book-isbn">Book ISBN to Update:</label>
+                            <input type="text" id="put-book-isbn" required>
+                        </div>
+                        <div>
+                            <label for="put-book-name">New Book Name:</label>
+                            <input type="text" id="put-book-name" required>
+                        </div>
+                        <div>
+                            <label for="put-book-author">New Author:</label>
+                            <input type="text" id="put-book-author" required>
+                        </div>
+                        <div>
+                            <label for="put-course">New Course:</label>
+                            <input type="text" id="put-course" required>
+                        </div>
+                        <div>
+                            <label for="put-section">New Section:</label>
+                            <input type="text" id="put-section" required>
+                        </div>
+                        <button type="submit" class="primary">Update Book</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>DELETE: Delete Book by ISBN</h3>
+                    <form id="form-delete-book">
+                        <div>
+                            <label for="delete-book-isbn">Book ISBN to Delete:</label>
+                            <input type="text" id="delete-book-isbn" required>
+                        </div>
+                        <button type="submit" class="delete">Delete Book</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>POST: Add New Borrower</h3>
+                    <form id="form-post-borrower">
+                        <div>
+                            <label for="post-borrower-name">Name:</label>
+                            <input type="text" id="post-borrower-name" required>
+                        </div>
+                        <div>
+                            <label for="post-borrower-email">Email:</label>
+                            <input type="email" id="post-borrower-email" required>
+                        </div>
+                        <button type="submit" class="success">Confirm</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET: View All Books</h3>
+                    <button id="btn-get-books" class="primary">Load Books</button>
+                    <div id="books-container">
+                        <table id="books-table">
+                            <thead>
+                                <tr>
+                                    <th>ISBN</th>
+                                    <th>Book Name</th>
+                                    <th>Author Name</th>
+                                    <th>Course</th>
+                                    <th>Section</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="api-response-container" class="card">
+                    <h3>Result:</h3>
+                    <pre id="api-response">Waiting for request...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="adminJs.js"></script>
+</body>
+</html>

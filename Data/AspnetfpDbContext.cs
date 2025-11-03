@@ -128,6 +128,11 @@ public partial class AspnetfpDbContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
+            entity.Property(e => e.BookTitle)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("BookTitle");
+
             entity.HasOne(d => d.Borrow).WithMany(p => p.ReturneeTbls)
                 .HasForeignKey(d => d.BorrowId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -136,6 +141,5 @@ public partial class AspnetfpDbContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
-
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

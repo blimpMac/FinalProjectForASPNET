@@ -2,10 +2,10 @@
 
 namespace FinalProject.Models
 {
-    public class BookTbl
+    public class Borrower2Tbl
     {
         [Key]
-        [Required(ErrorMessage = "ISBN number is required.")]
+        [Required]
         public string Isbnnumber { get; set; } = null!;
         [Required(ErrorMessage = "Book name is required.")]
         [StringLength(200, MinimumLength = 2, ErrorMessage = "Book name must be between 2 and 200 characters.")]

@@ -7,7 +7,6 @@ C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalPr
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.sourcelink.json
-C:\Users\Carmela\source\repos\FinalProject\FinalProject\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\bin\Debug\net8.0\appsettings.json
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\bin\Debug\net8.0\FinalProject.staticwebassets.endpoints.json
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\bin\Debug\net8.0\FinalProject.exe
@@ -171,4 +170,5 @@ C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\refint\
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.pdb
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\FinalProject.genruntimeconfig.cache
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\ref\FinalProject.dll
+C:\Users\Carmela\source\repos\FinalProject\FinalProject\bin\Debug\net8.0\FinalProject.staticwebassets.runtime.json
 C:\Users\Carmela\source\repos\FinalProject\FinalProject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
