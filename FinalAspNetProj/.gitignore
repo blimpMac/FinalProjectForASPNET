@@ -1,0 +1,17 @@
+# 1. Ignore Sibling Projects (Fixes your current issue)
+../FinalAspNetProj2/
+../FinalProject/
+../FinalProjectForASPNET/
+../MachineProblem1/
+../Midterm Project/
+../MidtermVer/
+../app javac/
+../backupaspnet/
+../webApi/
+
+# 2. Ignore standard ASP.NET/Visual Studio build artifacts
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
