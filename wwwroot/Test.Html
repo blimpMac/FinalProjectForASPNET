@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Staff</title>
+    <link rel="stylesheet" href="TestCSS.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <aside class="sidebar">
+            <h2>Library Panel</h2>
+            <nav>
+                <a href="AdminAcW.html" id="admin-login-link">Admin</a>
+                <a href="Test.Html">Staff</a>
+            </nav>
+        </aside>
+
+        <div class="main">
+            <div class="topbar">
+                <h1>Library Staff</h1>
+                <div>Staff Access</div>
+            </div>
+
+            <div class="dashboard">
+                <div class="card card-full-width">
+                    <h3>Book to Borrow</h3>
+                    <form id="form-post-borrowing">
+                        <div>
+                            <label for="post-borrow-isbn">Book ISBN to Borrow:</label>
+                            <input type="text" id="post-borrow-isbn" required>
+                        </div>
+                        <div>
+                            <label for="post-borrow-name">Borrower's Name:</label>
+                            <input type="text" id="post-borrow-name" required>
+                        </div>
+                        <div>
+                            <label for="post-borrow-year">Year:</label>
+                            <input type="number" id="post-borrow-year" required>
+                        </div>
+                        <div>
+                            <label for="post-borrow-course">Course:</label>
+                            <input type="text" id="post-borrow-course" required>
+                        </div>
+                        <div>
+                            <label for="post-borrow-section">Section:</label>
+                            <input type="text" id="post-borrow-section" required>
+                        </div>
+                        <button type="submit" class="success">Confirm</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET All Books</h3>
+                    <form id="form-get-books">
+                        <button type="submit" class="primary">Get All Books</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET All Borrowers</h3>
+                    <form id="form-get-borrowers">
+                        <button type="submit" class="primary">Get All Borrowers</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET All Returnees (from Borrowers)</h3>
+                    <form id="form-get-returnees-borrowers">
+                        <button type="submit" class="primary">Get All Returnees</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET Borrower by ID</h3>
+                    <form id="form-get-borrower">
+                        <div>
+                            <label for="get-borrower-id">Borrow Transaction ID:</label>
+                            <input type="number" id="get-borrower-id" required>
+                        </div>
+                        <button type="submit" class="primary">Get Borrower</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    &#8204;&#8204;&#8204;&#8204;&#8204;&#8204;&#8204;&#8204;                   
+                    <h3>GET All Return Records</h3>
+                    <form id="form-get-returnees">
+                        <button type="submit" class="primary">Get All Return Records</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>GET Return Record by ID</h3>
+                    <form id="form-get-returnee">
+                        <div>
+                            <label for="get-returnee-id">Return ID:</label>
+                            <input type="number" id="get-returnee-id" required>
+                        </div>
+                        <button type="submit" class="primary">Get Return Record</button>
+                    </form>
+                </div>
+
+                <div id="api-response-container" class="card">
+                    <h3>Result:</h3>
+                    <pre id="api-response">Waiting for request...</pre>
+                </div>
+
+                <div id="admin-modal-backdrop" class="modal-backdrop">
+                    <div class="modal-content">
+                        <span id="modal-close-button" class="modal-close">&times;</span>
+                        <h2>Admin Login</h2>
+                        <form id="admin-login-form">
+                            <div class="form-group">
+                                <label for="admin-username">Username:</label>
+                                <input type="text" id="admin-username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="admin-password">Password:</label>
+                                <input type="password" id="admin-password" required>
+                            </div>
+                            <p id="login-error-message" class="login-error"></p>
+                            <button type="submit" class="primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="TestJS.js"></script>
+</body>
+</html>
